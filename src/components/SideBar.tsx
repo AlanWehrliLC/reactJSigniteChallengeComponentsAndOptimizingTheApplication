@@ -3,6 +3,8 @@ import { useGenerAndMovies } from "../hooks/useGenerAndMovies";
 import { api } from "../services/api";
 import { Button } from "./Button";
 
+import '../styles/sidebar.scss';
+
 interface GenresProps{
   id: number;
   name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
