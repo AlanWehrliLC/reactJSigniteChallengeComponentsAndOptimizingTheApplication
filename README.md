@@ -1,18 +1,18 @@
-# ReactJS Ignite Challenge Components
+# ReactJS Ignite Challenge Components And Optimizing The Application
 
 Challenge proposed for Ignite on Reactjs trail, from Rocketseat. 
 
 ## Pré-requisitos
 
 ```
-git clone https://github.com/AlanWehrliLC/reactJSigniteChallengeComponents.git
+git clone https://github.com/AlanWehrliLC/reactJSigniteChallengeComponentsAndOptimizingTheApplication.git
 
-cd reactJSigniteChallengeComponents
+cd reactJSigniteChallengeComponentsAndOptimizingTheApplication
 
 yarn
 ```
 
-> Já que é utilizado um `fake api`, usando o `json-server`, após instalar as dependencias, utilize 'dois' terminais, um para iniciar o `json-server` e outra para a aplicação.
+> Since a `fake api` is used, using `json-server`, after installing as dependencies, use 'two' terminals, one for starting `json-server` and one for an application.
 
 ```
 yarn server
@@ -22,24 +22,30 @@ yarn server
 yarn dev
 ```
 
-### O que deveria ter sido edito na aplicação?
+### What should have been edited in the application?
 
  - src/App.tsx
-   - Esse componente contém toda a aplicação com exceção do componente Button que não precisava ser alterado e Icon que também não precisa de alteração.
 
  - src/components/Content.tsx
-   - Esse componente, deve possuir toda a lógica e corpo responsável pelo header e conteúdo da aplicação (seção contornada em vermelho):
 
 <p align="center">
-  <img alt="seção contornada em vermelho" src=".github/example01.png" width="100%">
+  <img alt="red outlined section" src=".github/example01.png" width="100%">
 </p>
 
  - src/components/SideBar.tsx
-   - Esse componente, deve possuir toda a lógica e corpo responsável pela seção que contém o título do site e a parte de navegação à esquerda da página (seção contornada em vermelho):
 
 <p align="center">
-  <img alt="seção contornada em vermelho" src=".github/example02.png" width="100%">
+  <img alt="red outlined section" src=".github/example02.png" width="100%">
 </p>
 
  - #### src/hooks/useGenerAndMovies.tsx
-   - Além de fazer todas as modificações necessárias, criei um Context, um hook, para passar informações entre componentes.
+   - In addition to making all the necessary modifications, create a context, a hook, to pass information between components.
+
+### Where were the optimizations done?
+
+  - src/components/Button.tsx
+    - Using `memo` to optimize the component.
+  - src/components/MovieCard.tsx
+    - Using `memo` to optimize the component.
+  - src/components/SideBar.tsx
+    - Using `useCallback` to optimize the component
